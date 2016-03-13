@@ -27,3 +27,6 @@ momentjs:moment
 pagebakers:ionicons
 check
 themeteorchef:jquery-validation
+
+accounts-base
+accounts-password
