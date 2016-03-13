@@ -1,29 +1,38 @@
 <template name="topbar">
     <section class="topbar">
         <div class="topbar__logo">
-            .
+            F R E E R U N
         </div>
         <div class="topbar__nav">
-            <a href="/">
+            <a href="{{pathFor route='main'}}">
                 <div class="topbar__nav--item">
                     Accueil
                 </div>
             </a>
-            <a href="#download">
+            <a href="/#download">
                 <div class="topbar__nav--item">
                     Télécharger
                 </div>
             </a>
-            <a href="#about">
+            <a href="/#about">
                 <div class="topbar__nav--item">
                     À propos
                 </div>
             </a>
-            <a href="/contact">
+            <a href="{{pathFor route='contact'}}">
                 <div class="topbar__nav--item">
                     Contact
                 </div>
             </a>
+        </div>
+        <div class="topbar__user">
+            <div class="topbar__nav--item">
+              {{#if currentUser}}
+                <a href="#" title="Se déconnecter" class="logout"><i class="ion-log-out"></i></a>
+              {{else}}
+                <a href="{{pathFor route='login'}}" title="Se connecter"><i class="ion-log-in"></i></a>
+              {{/if}}
+          </div>
         </div>
     </section>
 </template>

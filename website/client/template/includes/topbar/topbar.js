@@ -1,8 +1,7 @@
-$(window).on('scroll', function(){
-    if ($(window).scrollTop() == 0) {
-        $('.topbar').css('background', '#25272B');
-    }
-    else {
-        $('.topbar').css('background', '#25272B');
+Template.topbar.events({
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout();
+        Bert.alert('À bientôt!', 'info', 'growl-top-right');
     }
 });
